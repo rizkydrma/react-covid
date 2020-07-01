@@ -1,1 +1,1 @@
-<img src="/src/homepage.png" alt="gambar page home aplikasi" />
+<img src="/src/homepage.jpg" alt="gambar page home aplikasi" />
