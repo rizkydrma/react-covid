@@ -1,0 +1,13 @@
+.navbar {
+  margin: 0.75rem 1.75rem;
+}
+
+.navbar__logo {
+  width: 80px;
+}
+
+@media screen and (min-width: 850px) {
+  .navbar {
+    margin: 1rem 7rem;
+  }
+}

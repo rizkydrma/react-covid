@@ -1,18 +1,18 @@
-import { Homepage, About } from "pages";
+import { Homepage, Searchpage } from "pages";
 
 const appRoutes = [
   {
-    name: "About",
-    component: About,
+    name: "Searchpage",
+    component: Searchpage,
     exact: true,
-    path: "/about"
+    path: "/searchpage",
   },
   {
     name: "Homepage",
     component: Homepage,
     exact: true,
-    path: "/"
-  }
+    path: "/",
+  },
 ];
 
 export default appRoutes;
