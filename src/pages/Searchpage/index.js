@@ -13,7 +13,7 @@ import Banner from "components/atoms/Banner";
 import Footer from "components/atoms/Footer";
 import { getData } from "modules/redux/actions/covidAction";
 import { Img1, Img2, Img3, Img4, Img5, Img6 } from "libraries/asset.js";
-import "./searchpage.css";
+import { Circle, SearchpageBanner, Container } from "./Searchpage";
 
 const images = [Img1, Img2, Img3, Img4, Img5, Img6];
 
@@ -39,8 +39,8 @@ const Searchpage = () => {
 
   return (
     <Fragment>
-      <div className="circle"></div>
-      <div className="searchpage">
+      <Circle></Circle>
+      <Container>
         <img src={Logo} alt="Logo" />
 
         <Form
@@ -49,13 +49,13 @@ const Searchpage = () => {
           search={search}
         />
         <MyCard data={state.data} />
-        <div className="searchpage__banner">
+        <SearchpageBanner>
           {images.map((image, i) => (
             <Banner path={image} key={i} />
           ))}
-        </div>
+        </SearchpageBanner>
         <Footer text="updated, source from " />
-      </div>
+      </Container>
     </Fragment>
   );
 };

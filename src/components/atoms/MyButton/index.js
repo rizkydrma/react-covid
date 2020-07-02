@@ -1,8 +1,8 @@
 import { React, PropTypes } from "libraries";
-import "./mybutton.css";
+import { ButtonPrimary } from "./MyButton";
 
 const MyButton = ({ title }) => {
-  return <button className="button button--primary">{title}</button>;
+  return <ButtonPrimary>{title}</ButtonPrimary>;
 };
 
 MyButton.propTypes = {

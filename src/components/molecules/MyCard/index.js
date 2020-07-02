@@ -1,5 +1,5 @@
 import { React, PropTypes } from "libraries";
-import "./mycard.css";
+import { CardGrey, CardItem, CardValue, CardKey } from "./MyCard";
 
 function getCountry(url) {
   const country = String(url).split("/");
@@ -9,24 +9,24 @@ function getCountry(url) {
 const MyCard = ({ data }) => {
   const url = data.confirmed.detail;
   return (
-    <div className="card card--grey">
-      <div className="card__item">
-        <p className="card__value">{getCountry(url)}</p>
-        <p className="card__key">Negara</p>
-      </div>
-      <div className="card__item">
-        <p className="card__value">{data.confirmed.value}</p>
-        <p className="card__key">Positif</p>
-      </div>
-      <div className="card__item">
-        <p className="card__value">{data.recovered.value}</p>
-        <p className="card__key">Sembuh</p>
-      </div>
-      <div className="card__item">
-        <p className="card__value">{data.deaths.value}</p>
-        <p className="card__key">Meninggal</p>
-      </div>
-    </div>
+    <CardGrey>
+      <CardItem>
+        <CardValue>{getCountry(url)}</CardValue>
+        <CardKey>Negara</CardKey>
+      </CardItem>
+      <CardItem>
+        <CardValue>{data.confirmed.value}</CardValue>
+        <CardKey>Positif</CardKey>
+      </CardItem>
+      <CardItem>
+        <CardValue>{data.recovered.value}</CardValue>
+        <CardKey>Sembuh</CardKey>
+      </CardItem>
+      <CardItem>
+        <CardValue>{data.deaths.value}</CardValue>
+        <CardKey>Meninggal</CardKey>
+      </CardItem>
+    </CardGrey>
   );
 };
 

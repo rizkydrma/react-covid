@@ -1,6 +1,6 @@
 import { React, BrowserRouter as Router, Switch, Route } from "libraries";
 import { appRoutes } from "routes";
-import Navbar from "./components/atoms/Navbar";
+import Navbar from "./components/atoms/MyNavbar";
 
 const App = () => {
   return (

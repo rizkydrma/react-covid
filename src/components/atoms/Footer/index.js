@@ -1,16 +1,21 @@
-import { React, PropTypes } from "libraries";
+import { React, PropTypes, Styled } from "libraries";
 import TripleDot from "../../../assets/images/triple-dot.svg";
-import "./footer.css";
+
+const FooterText = Styled.div`
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+`;
 
 const Footer = ({ text }) => {
   return (
-    <div className="homepage__credit">
+    <FooterText>
       <img src={TripleDot} alt="Triple Dot" className="credit__image" />
       <p>
         {text}
         <span className="credit__text--primary">mathdroid.com</span>
       </p>
-    </div>
+    </FooterText>
   );
 };
 

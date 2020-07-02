@@ -4,8 +4,15 @@ import Button from "components/atoms/MyButton";
 import MyCard from "components/molecules/MyCard";
 import Footer from "components/atoms/Footer";
 import { getData } from "modules/redux/actions/covidAction";
-
-import "./homepage.css";
+import {
+  Container,
+  HomepageBody,
+  HomepageRight,
+  HomepageLeft,
+  Title,
+  Subtitle,
+  Image,
+} from "./HomePage.js";
 
 const Homepage = () => {
   const state = useSelector((state) => state.data);
@@ -16,29 +23,27 @@ const Homepage = () => {
   }, [dispatch]);
 
   return (
-    <div className="homepage">
-      <div className="homepage__body">
-        <div className="homepage__right-content">
-          <img src={Banner} className="homepage__image" alt="Gambar Homepage" />
-        </div>
-        <div className="homepage__left-content">
-          <h1 className="homepage__title">
-            Selamatkan Dirimu Menyelamatkan Dunia.
-          </h1>
-          <p className="homepage__subtitle">
+    <Container>
+      <HomepageBody>
+        <HomepageRight>
+          <Image src={Banner} alt="Gambar Homepage" />
+        </HomepageRight>
+        <HomepageLeft>
+          <Title>Selamatkan Dirimu Menyelamatkan Dunia.</Title>
+          <Subtitle>
             penyakit coronavirus (Covid-19) adalah penyakit menular yang
             disebabkan oleh virus baru.
-          </p>
+          </Subtitle>
           <Link to="/searchpage">
             <Button title="Check Other Country" />
           </Link>
-        </div>
-      </div>
+        </HomepageLeft>
+      </HomepageBody>
       <div className="homepage__footer">
         <MyCard data={state.data} />
         <Footer text="updated, source from" />
       </div>
-    </div>
+    </Container>
   );
 };
 
