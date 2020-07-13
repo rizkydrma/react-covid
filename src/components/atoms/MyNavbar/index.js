@@ -5,7 +5,7 @@ import { Navbar, NavbarLogo } from "./Navbar";
 const MyNavbar = () => {
   return (
     <Navbar>
-      <Link to="/">
+      <Link to="/react-covid">
         <NavbarLogo src={Logo} alt="dblCovid" />
       </Link>
     </Navbar>

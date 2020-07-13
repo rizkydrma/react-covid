@@ -11,7 +11,7 @@ const appRoutes = [
     name: "Homepage",
     component: Homepage,
     exact: true,
-    path: "/",
+    path: "/react-covid",
   },
 ];
 
