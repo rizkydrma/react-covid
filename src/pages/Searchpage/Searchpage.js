@@ -18,7 +18,7 @@ export const Container = Styled.div`
 
 export const SearchpageBanner = Styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 
   @media screen and (min-width: 850px) {
       display: flex;
